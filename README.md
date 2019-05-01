@@ -1,4 +1,4 @@
-# Project-1: Ambient app
+# Project-1: AmbiApp
 
 
 Team Members: Marco, Alapan, Carlos
