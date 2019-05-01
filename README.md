@@ -19,7 +19,7 @@ Task breakdown - Marco HTML documentation and layout then Javascript
 
 
 
-    Sketch -  to be determined.
+   
 
 
 
