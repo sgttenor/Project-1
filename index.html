@@ -65,9 +65,11 @@
     <div class="row">
       <div class="col-sm" id=videoResults>
         <div class="card bg-dark text-white" id="forest">
-          <img src="assets/images/forest.jpg" class="card-img" alt="...">
+
+          <img src="assets/images/forest.jpg" class="card-img" alt="forest">
           <div class="card-img-overlay">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Forest Sounds</h5>
+
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
               content. This content is a little bit longer.</p>
             <p class="card-text">Last updated 3 mins ago</p>
@@ -76,9 +78,11 @@
       </div>
       <div class="col-sm soundResults" id="ocean">
         <div class="card bg-dark text-white">
-          <img src="..." class="card-img" alt="...">
+
+          <img src="assets/images/ocean.jpg" class="card-img" alt="ocean">
           <div class="card-img-overlay">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Ocean sounds</h5>
+
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
               content. This content is a little bit longer.</p>
             <p class="card-text">Last updated 3 mins ago</p>
@@ -93,29 +97,47 @@
       <div class="col-sm" id="stream">
         For stream search
       </div>
-      <div class="col-sm" id="rain">
-        for rain search
+
+      <div class="col-sm" id="waterFall">
+        For waterFall search
       </div>
     </div>
   </div>
 
-  <div class="container" id="waterFall">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm" id="thunderStorm">
+        For thunderstorm search
+      </div>
+      <div class="col-sm" id="rain">
+        For rain search
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
     <div class="row">
       <div class="col-sm">
-        One of three columns
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="YouTube">YouTube Search</button>
+        </form>
       </div>
       <div class="col-sm">
-        One of three columns
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" id="spotify" type="submit">Spotify Search</button>
+        </form>
       </div>
     </div>
   </div>
 
-  <div id="search-results-body">
+  <div id="footer">
+    <div class="container">
+      <p class="footer-block">Place sticky footer content here.</p>
+    </div>
   </div>
-
-  <div id="soundcloud-player-box"></div>
-  <div id="youtube-player-box"></div>
-
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -128,6 +150,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+  <script src="assets/javascript/app.js"></script>
+
 </body>
 
 </html>
