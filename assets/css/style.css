@@ -1,0 +1,19 @@
+h1, h5, p{
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+    font-weight: 600 !important;
+}
+
+.jumbotron {
+    background-image: url("https://media.wired.com/photos/5ade7873b0e3e90b45c61d6e/4:3/w_2000,c_limit/1_JasonWeingart.jpg");
+}
+
+.disabled {
+    display: none;
+}
+
+img { 
+    width: 200px;
+    height: 200px;
+}
