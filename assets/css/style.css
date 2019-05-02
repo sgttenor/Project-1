@@ -1,3 +1,7 @@
+.nav-bar {
+    background-image: url("https://wallpaperplay.com/walls/full/7/4/9/180408.jpg") !important;
+}
+
 h1, h5, p{
     color: #ffffff;
     text-align: center;
@@ -16,4 +20,19 @@ h1, h5, p{
 img { 
     width: 200px;
     height: 200px;
+}
+.container {
+    padding-bottom: 100px;
+}
+
+.footer-block {
+    padding-top: 100px;
+    color: black;
+    margin: auto;
+    height: 100px;
+    
+}
+
+#footer {
+    background-image: url("https://wallpaperplay.com/walls/full/7/4/9/180408.jpg");
 }
