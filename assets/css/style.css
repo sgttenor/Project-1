@@ -1,26 +1,23 @@
-.nav-bar {
-    background-image: url("https://wallpaperplay.com/walls/full/7/4/9/180408.jpg") !important;
-}
 
-h1, h5, p{
-    color: #ffffff;
+
+h1, .lead, h6, button {
+    color: #ffffff !important;
     text-align: center;
     font-style: italic;
-    font-weight: 600 !important;
+    font-weight: 900 !important;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 .jumbotron {
     background-image: url("https://media.wired.com/photos/5ade7873b0e3e90b45c61d6e/4:3/w_2000,c_limit/1_JasonWeingart.jpg");
+    max-height: 400px;
 }
 
 .disabled {
     display: none;
 }
 
-img { 
-    width: 200px;
-    height: 200px;
-}
+
 .container {
     padding-bottom: 100px;
 }
@@ -33,6 +30,44 @@ img {
     
 }
 
+h5, p {
+    color: black;
+}
 #footer {
     background-image: url("https://wallpaperplay.com/walls/full/7/4/9/180408.jpg");
+}
+
+img {
+    animation-duration: 6s;
+    animation-name: bounceIn;
+  }
+
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+img { 
+    width: 200px;
+    height: 200px;
+    border-radius: 100%; 
+    transition: box-shadow 1s, transform 2s
+}
+
+img:hover {
+   cursor: pointer;
+   box-shadow:  15px 15px  15px rgba(0, 0, 0, 0.5);
+   transition: box-shadow 1s;
+   transform: translate(5px, 40px);
+   transition: box-shadow 1s, transform 2s;
+   
 }
