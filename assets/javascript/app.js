@@ -16,60 +16,53 @@ $(document).ready(function () {
         jqXHR.setRequestHeader("X-RapidAPI-Key", "bbc38e84eamsh62eb5256b273599p1a8523jsn69457858fec8");
       },
       method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
       console.log(response);
       console.log(response.data[0].link);
 
-      var $audioBlock = $("<audio>");
+      var $audioBlock = $("<audio controls>");
       $audioBlock.attr("src", response.data[0].preview);
-      $audioBlock.attr("type", audio/mpeg);
-      
+      $audioBlock.attr("type", "audio/mpeg");
+
       $("#music-show").append($audioBlock);
     });
   }
+  
+  var audioSample = {
+    element: document.createElement("audio"),
+    volume: 0.1,
+    autoplay: false,
+    preload: true,
+  }
 
-});
+  $("#forestIMG").click(function () {
+    var samplePath = "assets/forest.mp3";
+    var audio = audioSamplePlay(samplePath);
 
-function displayInfo() {
-  var topic = $("this").attr("data-name");
-  var queryURL = "https://api.spotify.com/v1" + topic + "/browse/categories/{1856f37d7b6c45e99c921406864f622f}";
-
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).done(function (response) {
-
-    //empty gif div so new selection appends to emtpy div - do not want previous searches listed
-
-    $("#forest").empty();
-
-
-
-    //user for loop to grab the rating information and appropriate gif for button clicked into its own div to keep information together
-
-
-
-    //on click of gif still image, gif will play. When clicked again, gif will pause.
-
-
+    audio.play();
   });
 
-}
-//audio on hover
-// var audio = $("audio")[0];
-// $("#forestIMG").mouseenter(function() {
-//   audio.play();
-// });
-$(document).ready(function() {
-  var obj = document.createElement("audio");
-  obj.src = "assets/forest.mp3";
-  obj.volume = 0.1;
-  obj.autoPlay = false;
-  obj.preLoad = true;
-  obj.controls = true;
+  $("#oceanIMG").click(function () {
+    var samplePath = "assets/ocean.mp3";
+    var audio = audioSamplePlay(samplePath);
 
-  $("#forestIMG").click(function() {
-    obj.play();
-    // obj.pause();
+    audio.play();
   });
+
+  $("#streamIMG").click(function () {
+    var samplePath = "assets/stream.mp3";
+    var audio = audioSamplePlay(samplePath);
+
+    audio.play();
+  });
+
+  function audioSamplePlay(source) {
+    var audioElement = audioSample.element;
+
+    audioElement.src = source;
+    audioElement.autoplay = audioSample.autoplay;
+    audioElement.preload = audioSample.preload;
+
+    return audioElement;
+  }
 });
