@@ -72,13 +72,13 @@ h5, p {
 
 /*image layout and animation*/
  button {
-  animation-duration: 6s;
+  animation-duration: 8s;
   animation-name: slideInLeft;
 } 
 
 .jumbotron, input {
   animation-name: fadeIn;
-  animation-duration: 10s;
+  animation-duration: 4s;
 
 }
 
