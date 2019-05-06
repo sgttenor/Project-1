@@ -1,5 +1,4 @@
 
-
 h1, .lead, button  {
     color: #ffffff !important;
     text-align: center;
@@ -8,6 +7,7 @@ h1, .lead, button  {
     font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
+
 
 display-4 {
      margin-top: 50px;
@@ -71,6 +71,52 @@ h5, p {
 }
 
 /*image layout and animation*/
+ button {
+  animation-duration: 6s;
+  animation-name: slideInLeft;
+} 
+
+.jumbotron, input {
+  animation-name: fadeIn;
+  animation-duration: 10s;
+
+}
+
+/* h1 {
+  animation:blinkingText 0.8s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: #ffffff;    }
+  49%{    color: transparent; }
+  50%{    color: transparent; }
+  99%{    color:transparent;  }
+  100%{   color: #1e76be;    }
+} */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 img {
     animation-duration: 4s;
     animation-name: bounceIn;  
