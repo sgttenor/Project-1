@@ -1,5 +1,3 @@
-var topics = ["Forest", "Ocean"];
-
 $(document).ready(function () {
 
   $("#deezer").on("click", function (event) {
@@ -17,11 +15,16 @@ $(document).ready(function () {
         jqXHR.setRequestHeader("X-RapidAPI-Host", "deezerdevs-deezer.p.rapidapi.com");
         jqXHR.setRequestHeader("X-RapidAPI-Key", "bbc38e84eamsh62eb5256b273599p1a8523jsn69457858fec8");
       },
-      method: "GET",
-    }).then(function (response) {
+      method: "GET"
+    }).then(function(response) {
       console.log(response);
-      console.log(response.data[0].link)
+      console.log(response.data[0].link);
 
+      var $audioBlock = $("<audio>");
+      $audioBlock.attr("src", response.data[0].preview);
+      $audioBlock.attr("type", audio/mpeg);
+      
+      $("#music-show").append($audioBlock);
     });
   }
 
