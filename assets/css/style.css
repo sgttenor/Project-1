@@ -9,6 +9,10 @@ h1, .lead, button  {
     
 }
 
+display-4 {
+     margin-top: 50px;
+}
+
 h1, .lead {
     text-shadow:  4px 4px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000; 
 }
@@ -26,9 +30,13 @@ button {
     background-image: url("https://media.wired.com/photos/5ade7873b0e3e90b45c61d6e/4:3/w_2000,c_limit/1_JasonWeingart.jpg");
 }
 
+.searchBar {
+  padding-bottom: 110px;
+}
+
 .banner-height {
-    
-    margin-bottom: 300px;
+    padding-top: 50px;
+    margin-bottom: 200px;
 }
 
 .btn-outline-success {
@@ -41,7 +49,7 @@ button {
 
 
 .category-box {
-    margin-bottom: 100px;
+    margin-bottom: 150px;
    
 }
 
@@ -55,6 +63,8 @@ button {
 
 h5, p {
     color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
 }
 #footer {
     background-image: url("https://wallpaperplay.com/walls/full/7/4/9/180408.jpg");
@@ -95,4 +105,4 @@ img:hover {
    transition: box-shadow 1s, transform 2s;
    
 }
-
+/*water effect

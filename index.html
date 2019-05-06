@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!--Audio source for hover effects-->
-  
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -25,12 +25,8 @@
 
     <div class="collapse navbar-collapse justify-content-center ml-auto" id="navbarSupportedContent">
       <ul class="navbar-nav justify-content-center">
-<<<<<<< HEAD
-            <li class=" nav-item active">
-=======
-            <li class="nav-item active">
->>>>>>> 8721fbfa4f1866311f55efad2958c37d34b09ddf
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -55,22 +51,24 @@
   </nav>
 
   <div class="jumbotron jumbotron-fluid mt-5 py-0">
-    <div class="container-fluid banner-color">  
+    <div class="container-fluid banner-color">
       <div class="container banner-height">
-        <h1 class="display-4 ">AmbiApp</h1>
-        <h5 class="lead">Serenity is not freedom from the storm, but peace amid the storm.</h5>
+        <h1 class="display-4 my-3">AmbiApp</h1>
+        <h5 class="lead mt-2">Serenity is not freedom from the storm, but peace amid the storm.</h5>
       </div>
       <div class="container mb-5">
-        <div class="row">
+        <div class="row searchBar">
           <div class="col-sm">
             <form class="form-inline my-2 my-lg-0 ml-auto">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="tubeSearch">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                id="tubeSearch">
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="YouTube">YouTube Search</button>
             </form>
           </div>
           <div class="col-sm">
             <form class="form-inline my-2 my-lg-0 ml-auto">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="deezSearch">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                id="deezSearch">
               <button class="btn btn-outline-success my-2 my-sm-0" id="deezer" type="submit">Deezer Search</button>
             </form>
           </div>
@@ -84,14 +82,14 @@
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="assets/images/forest.jpg" class="card-img" alt="...">
+            <img src="assets/images/forest.jpg" class="card-img" alt="Forest" id="forestIMG" value="play>
+            <audio id="audio" src="assets/forest.mp3" ></audio>
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Forest</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p class="card-text">Take your heart for a walk in the woods and listen to the magical whispers of old
+                trees</p>
             </div>
           </div>
         </div>
@@ -100,35 +98,30 @@
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="assets/images/ocean.jpg" class="card-img" alt="...">
+              <img src="assets/images/ocean.jpg" class="card-img" alt="Ocean" id="oceanIMG" value="play">
+              <audio id="audio1" src="assets/Ocean.mp3" ></audio>
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Ocean</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p class="card-text">The sea, once it casts its spell, holds one in its net of wonder forever.</p>
+              <p class="card-text"><small class="text-muted">Jacques Yves Cousteau, Oceanographer</small></p>
             </div>
           </div>
         </div>
       </div>
     </div>
- 
 
-
-  
     <div class="row my-5">
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="assets/images/Stream.jpg" class="card-img" alt="...">
+            <img src="assets/images/Stream.jpg" class="card-img" alt="Stream" id="streamIMG">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Stream</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <h5 class="card-title">Streams and Creeks</h5>
+              <p class="card-text">Let the flowing creek guide you along it's windy path of calmness</p>
             </div>
           </div>
         </div>
@@ -137,58 +130,89 @@
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="assets/images/Waterfall.jpg" class="card-img" alt="...">
+            <img src="assets/images/Waterfall.jpg" class="card-img" alt="Waterfall" id="waterfallIMG">
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Waterfall</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p class="card-text">When the moonlight and the waterfall come together, all other things fade from the
+                scene!</p>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="row my-5">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="assets/images/Thunderstorm.png" class="card-img" alt="Thunderstorm" id="thunderIMG">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Thunderstrom</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="assets/images/rain.png" class="card-img" alt="Rain" id="rainIMG">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Rain</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row my-5">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="assets/images/night.jpg" class="card-img" alt="Night" id="nightIMG">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Night</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="assets/images/Whales.jpg" class="card-img" alt="Whales" id="whaleIMG">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Whales</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  
-
-  
-    <div class="row my-5">
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="assets/images/Thunderstorm.png" class="card-img" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Thunderstrom</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src="assets/images/rain.png" class="card-img" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Rain</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
 
-   
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
