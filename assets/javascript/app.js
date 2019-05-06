@@ -56,6 +56,41 @@ $(document).ready(function () {
     audio.play();
   });
 
+  $("#thunderIMG").click(function () {
+    var samplePath = "assets/thunder.wav";
+    var audio = audioSamplePlay(samplePath);
+
+    audio.play();
+  });
+
+  $("#rainIMG").click(function () {
+    var samplePath = "assets/rain.mp3";
+    var audio = audioSamplePlay(samplePath);
+
+    audio.play();
+  });
+
+  $("#waterfallIMG").click(function () {
+    var samplePath = "assets/waterfall.wav";
+    var audio = audioSamplePlay(samplePath);
+
+    audio.play();
+  });
+
+  $("#nightIMG").click(function () {
+    var samplePath = "assets/night.mp3";
+    var audio = audioSamplePlay(samplePath);
+
+    audio.play();
+  });
+
+  $("#whaleIMG").click(function () {
+    var samplePath = "assets/whale.mp3";
+    var audio = audioSamplePlay(samplePath);
+
+    audio.play();
+  });
+
   function audioSamplePlay(source) {
     var audioElement = audioSample.element;
 
