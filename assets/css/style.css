@@ -1,16 +1,46 @@
 
 
-h1, .lead, h6, button {
+h1, .lead, button  {
     color: #ffffff !important;
     text-align: center;
     font-style: italic;
-    font-weight: 900 !important;
-    font-family: Georgia, 'Times New Roman', Times, serif
+    font-weight: 1000 !important;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
 }
+
+display-4 {
+     margin-top: 50px;
+}
+
+h1, .lead {
+    text-shadow:  4px 4px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000; 
+}
+
+button {
+   color: #ffffff !important;
+}
+
+    /* .banner-color {
+        background-color: rgba(210, 210, 137, 0.4);
+    } */
+
 
 .jumbotron {
     background-image: url("https://media.wired.com/photos/5ade7873b0e3e90b45c61d6e/4:3/w_2000,c_limit/1_JasonWeingart.jpg");
-    max-height: 400px;
+}
+
+.searchBar {
+  padding-bottom: 110px;
+}
+
+.banner-height {
+    padding-top: 50px;
+    margin-bottom: 200px;
+}
+
+.btn-outline-success {
+    background-color: rgb(255, 20, 20);
 }
 
 .disabled {
@@ -18,8 +48,9 @@ h1, .lead, h6, button {
 }
 
 
-.container {
-    padding-bottom: 100px;
+.category-box {
+    margin-bottom: 150px;
+   
 }
 
 .footer-block {
@@ -32,14 +63,17 @@ h1, .lead, h6, button {
 
 h5, p {
     color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
 }
 #footer {
     background-image: url("https://wallpaperplay.com/walls/full/7/4/9/180408.jpg");
 }
 
+/*image layout and animation*/
 img {
-    animation-duration: 6s;
-    animation-name: bounceIn;
+    animation-duration: 4s;
+    animation-name: bounceIn;  
   }
 
   @keyframes bounceIn {
@@ -71,3 +105,4 @@ img:hover {
    transition: box-shadow 1s, transform 2s;
    
 }
+/*water effect

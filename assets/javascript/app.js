@@ -21,7 +21,7 @@ $(document).ready(function () {
     }).then(function (response) {
       console.log(response);
       console.log(response.data[0].link)
-      
+
     });
   }
 
@@ -52,4 +52,21 @@ function displayInfo() {
   });
 
 }
+//audio on hover
+// var audio = $("audio")[0];
+// $("#forestIMG").mouseenter(function() {
+//   audio.play();
+// });
+$(document).ready(function() {
+  var obj = document.createElement("audio");
+  obj.src = "assets/forest.mp3";
+  obj.volume = 0.1;
+  obj.autoPlay = false;
+  obj.preLoad = true;
+  obj.controls = true;
 
+  $("#forestIMG").click(function() {
+    obj.play();
+    // obj.pause();
+  });
+});
