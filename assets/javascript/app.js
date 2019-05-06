@@ -61,15 +61,53 @@ function displayInfo() {
 //   audio.play();
 // });
 $(document).ready(function() {
-  var obj = document.createElement("audio");
-  obj.src = "assets/forest.mp3";
-  obj.volume = 0.1;
-  obj.autoPlay = false;
-  obj.preLoad = true;
-  obj.controls = true;
+  var soundClip = {
+    forest:  {
+      audio: document.createElement("audio"),
+      source: document.createElement("source"),
+      src: "assets/forest.mp3",
+      volume: 0.1,
+      autoPlay: false,
+      preLoad: true,
+      controls: true,
+    },
+
+     ocean: {
+      audio: document.createElement("audio1"),
+      src: "assets/forest.mp3",
+      volume: 0.1,
+      autoPlay: false,
+      preLoad: true,
+      controls: true,
+     } ,
+    // rain = {
+
+    // }, 
+
+  }
+
+
+  
 
   $("#forestIMG").click(function() {
-    obj.play();
+    makeAudio(soundClip.forest);
     // obj.pause();
+
   });
+
+  function makeAudio (prop) {
+    console.log(prop);
+
+    var audioObject = prop;
+    var audioFile = prop.audio;
+
+    console.log(prop.audio);
+
+    audioFile.controls = audioObject.controls;
+    audioFile.src = audioObject.src;
+    audioFile.volume = audioObject.volume;
+    audioFile.autoPlay = audioObject.autoPlay;
+    audioFile.preLoad = audioObject.preLoad;
+    console.log(prop.audio);
+  }
 });
