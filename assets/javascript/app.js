@@ -1,5 +1,3 @@
-var topics = ["Forest", "Ocean"];
-
 $(document).ready(function () {
 
   $("#deezer").on("click", function (event) {
@@ -21,6 +19,12 @@ $(document).ready(function () {
     }).then(function(response) {
       console.log(response);
       console.log(response.data[0].link);
+
+      var $audioBlock = $("<audio>");
+      $audioBlock.attr("src", response.data[0].preview);
+      $audioBlock.attr("type", audio/mpeg);
+      
+      $("#music-show").append($audioBlock);
     });
   }
 
