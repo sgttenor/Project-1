@@ -48,13 +48,13 @@ $(document).ready(function () {
   });
 
   function hideShortsShowVideo() {
-    $(".shortcut-box").addClass("d-none");
+    $(".shortcut-box").hide(1000);
     $("#music-show").removeClass("d-none");
     $("#back-button-box").removeClass("d-none");
   }
 
   function showShortsHideVideo() {
-    $(".shortcut-box").removeClass("d-none");
+    $(".shortcut-box").show(1000);
     $("#music-show").addClass("d-none");
     $("#back-button-box").addClass("d-none");
   }
@@ -62,4 +62,6 @@ $(document).ready(function () {
   function flushVideoShow() {
     $("#music-show").empty();
   }
+
+ 
 });

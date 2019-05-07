@@ -31,7 +31,7 @@ function searchYoutubeSource(target) {
             videoFrame.attr("width", "420");
             videoFrame.attr("height", "315");
             videoFrame.attr("frameborder", "0");
-            videoFrame.attr("allowfullscreen");
+            videoFrame.attr("allowfullscreen", true);
             videoFrame.attr("src", videoSource);
             videoFrame.addClass("player");
  
