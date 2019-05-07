@@ -6,12 +6,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!--Audio source for hover effects-->
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
-
   <title>AmbiApp</title>
 </head>
 
@@ -35,22 +33,20 @@
             <form class="form-inline my-2 my-lg-0 ml-auto">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
                 id="deezSearch">
-              <button button class="btn bt1 btn-outline-success my-2 my-sm-0" id="deezer" type="button">Deezer
-                Search</button>
+              <button class="btn btn-outline-success my-2 my-sm-0" id="deezer" type="submit">Deezer Search</button>
             </form>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="container container1">
-    <div class="row  my-5">
-      <div class="card mb-3" style="max-width: 540px;">
+  <div class="container shortcut-box">
+    <div class="row my-5">
+      <div class="card mb-3 col" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="assets/images/forest.jpg" class="card-img" alt="Forest" id="forestIMG" value="play>
-            <audio id=" audio" src="assets/forest.mp3"></audio>
+            <img src="assets/images/forest.jpg" class="card-img" alt="Forest" id="forestIMG"
+              audioPath="assets/audio/forest.mp3">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -61,12 +57,11 @@
           </div>
         </div>
       </div>
-
-      <div class="card mb-3" style="max-width: 540px;">
+      <div class="card mb-3 col" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="assets/images/ocean.jpg" class="card-img" alt="Ocean" id="oceanIMG" value="play">
-            <audio id="audio1" src="assets/Ocean.mp3"></audio>
+            <img src="assets/images/ocean.jpg" class="card-img" alt="Ocean" id="oceanIMG"
+              audioPath="assets/audio/ocean.mp3">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -78,12 +73,12 @@
         </div>
       </div>
     </div>
-
     <div class="row my-5">
-      <div class="card mb-3" style="max-width: 540px;">
+      <div class="card mb-3 col" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="assets/images/Stream.jpg" class="card-img" alt="Stream" id="streamIMG">
+            <img src="assets/images/Stream.jpg" class="card-img" alt="Stream" id="streamIMG"
+              audioPath="assets/audio/stream.mp3">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -93,11 +88,11 @@
           </div>
         </div>
       </div>
-
-      <div class="card mb-3" style="max-width: 540px;">
+      <div class="card mb-3 col" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="assets/images/Waterfall.jpg" class="card-img" alt="Waterfall" id="waterfallIMG">
+            <img src="assets/images/Waterfall.jpg" class="card-img" alt="Waterfall" id="waterfallIMG"
+              audioPath="assets/audio/waterfall.wav">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -108,80 +103,81 @@
           </div>
         </div>
       </div>
-
-      <div class="row my-5">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="assets/images/Thunderstorm.png" class="card-img" alt="Thunderstorm" id="thunderIMG">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Thunderstrom</h5>
-                <p class="card-text">They say all marriages are made in heaven, but so are thunder and lightning.</p>
-              </div>
-            </div>
+    </div>
+    <div class="row my-5">
+      <div class="card mb-3 col" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="assets/images/Thunderstorm.png" class="card-img" alt="Thunderstorm" id="thunderIMG"
+              audioPath="assets/audio/thunder.wav">
           </div>
-        </div>
-
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="assets/images/rain.png" class="card-img" alt="Rain" id="rainIMG">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Rain</h5>
-                <p class="card-text">Let the rain kiss you. Let the rain beat upon your head with silver liquid drops.
-                  Let the rain sing you a lullaby.</p>
-              </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Thunderstrom</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                additional
+                content. This content is a little bit longer.</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="row my-5">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="assets/images/night.jpg" class="card-img" alt="Night" id="nightIMG">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Night</h5>
-                <p class="card-text">Night is a time of rigor, but also of mercy. There are truths which one can see
-                  only when it's dark</p>
-              </div>
+      <div class="card mb-3 col" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="assets/images/rain.png" class="card-img" alt="Rain" id="rainIMG"
+              audioPath="assets/audio/rain.mp3">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Rain</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                additional
+                content. This content is a little bit longer.</p>
             </div>
           </div>
         </div>
-
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-4">
-              <img src="assets/images/Whales.jpg" class="card-img" alt="Whales" id="whaleIMG">
+      </div>
+    </div>
+    <div class="row my-5">
+      <div class="card mb-3 col" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="assets/images/night.jpg" class="card-img" alt="Night" id="nightIMG"
+              audioPath="assets/audio/night.mp3">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Night</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
             </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Whales</h5>
-                <p class="card-text">The whales do not sing because they have an answer, they sing because they have a
-                  song.</p>
-              </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3 col" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="assets/images/Whales.jpg" class="card-img" alt="Whales" id="whaleIMG"
+              audioPath="assets/audio/whale.mp3">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Whales</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="container2">
-    <div id="music-show">
-     
-    </div>
-    <button id="back" class="justify-content-center">Back</button>
+  <div id="music-show" class="container">
   </div>
-
-
+  <div id="back-button-box" class="container">
+    <div class="row">
+      <button id="back" class="btn btn-outline-success">Back</button>
+    </div>
+  </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -194,8 +190,6 @@
   <script src="assets/javascript/youtubeSearch.js"></script>
   <script src="assets/javascript/deezerSearch.js"></script>
   <script src="assets/javascript/app.js"></script>
-  <script src="assets/javascript/deezerSearch.js"></script>
-  <script src="assets/javascript/youtubeSearch.js"></script>
 </body>
 
 </html>
