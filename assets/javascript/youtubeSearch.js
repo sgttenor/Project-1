@@ -49,7 +49,7 @@ function searchYoutubeSource(target) {
             rowCount++;
             videoFrame.addClass("col-md-4");
             videoFrame.addClass("video-frame");
-            $("#music-show").append(videoFrame);
+            $("#music-show").prepend(videoFrame);
         }
     });
  }
