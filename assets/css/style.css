@@ -75,7 +75,7 @@ h5, p {
 
 /*image layout and animation*/
  button {
-  animation-duration: 8s;
+  animation-duration: 4s;
   animation-name: slideInLeft;
 } 
 
