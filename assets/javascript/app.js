@@ -51,6 +51,8 @@ $(document).ready(function () {
     $(".shortcut-box").hide(1000);
     $("#music-show").removeClass("d-none");
     $("#back-button-box").removeClass("d-none");
+    $("#tubeSearch").val("");
+    $("#deezSearch").val("");
   }
 
   function showShortsHideVideo() {
@@ -62,6 +64,4 @@ $(document).ready(function () {
   function flushVideoShow() {
     $("#music-show").empty();
   }
-
- 
 });
