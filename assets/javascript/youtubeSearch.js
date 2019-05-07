@@ -1,3 +1,5 @@
+var videoIDs = [];
+
 function searchYoutubeSource(target) {
     var searchTerm = $("#tubeSearch").val().trim();
     console.log(searchTerm);
@@ -10,42 +12,30 @@ function searchYoutubeSource(target) {
     $.ajax({
         url: queryURL,
         method: "GET"
-    })
-        // After the data comes back from the API
-        .then(function (response) {
-            console.log(response);
-            console.log(response.items);
-            var videoResults = response.items;
-            console.log("Video Results:", videoResults);
-            console.log(response.items[0].id.videoId);
+    }).then(function (response) {
+        var videoResults = response.items;
+        var length = response.items.length;
 
-            for (var i = 0; i < videoResults.length; i++) {
-                var title = videoResults[i].snippet.title;
-                var videoId = videoResults[i].id.videoId
-                console.log("Title: " + title);
-                console.log("Video Id: " + videoId);
-                var videoSource = "https://www.youtube.com/embed?v=" + videoId;
-                console.log(videoSource);
-                var video = $("<iframe>");
-                video.attr("id", video);
-                video.attr("width", "420");
-                video.attr("height", "315");
-                video.attr("frameborder", "0");
-                video.attr("allowfullscreen");
-                video.attr("src", videoSource);
-                video.addClass("player");
-                $("#videos-appear-here").append(video);
-            }
-        });
-}
+        if (length > 13) {
+            length = 13;
+        }
 
+        for (var i = 0; i < response.items.length; i++) {
+            var videoSource = "https://www.youtube.com/embed/" + response.items[i].id.videoId;
+            var video = $("<iframe>");
 
-$(document).ready(function () {
-    $('button').on('click', function (ev) {
+            video.attr("id", response.items[i].id.videoId);
+            video.attr("width", "420");
+            video.attr("height", "315");
+            video.attr("frameborder", "0");
+            video.attr("allowfullscreen");
+            video.attr("src", videoSource);
+            video.addClass("player");
+            $("#music-show").append(video);
+        }
 
-        $(".player")[0].src += "&autoplay=1";
-        ev.preventDefault();
-
+        videoIDs.forEach(function (id) {
+        })
     });
 
 
@@ -61,7 +51,7 @@ $(document).ready(function () {
             }
         });
     }
-});
+}
 
 $("button").on("click", function(){
     $(".container1").hide(1000);
@@ -69,4 +59,6 @@ $("button").on("click", function(){
 
 $("#back").on("click", function(){
     $(".container1").show(1000);
+    $(".container2").hide(1000);
+    
 })
