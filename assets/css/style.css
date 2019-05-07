@@ -11,6 +11,10 @@ h1, .lead, button {
   background-color: rgb(255, 20, 20);
 }
 
+.shortcut-box {
+  visibility: visible;
+}
+
 display-4 {
      margin-top: 50px;
 }
@@ -24,13 +28,11 @@ button {
    
 }
 
-    /* .banner-color {
-        background-color: rgba(210, 210, 137, 0.4);
-    } */
 
 #back {
-  text-align: center;
+ position: relative;
 }
+
 .jumbotron {
     background-image: url("https://media.wired.com/photos/5ade7873b0e3e90b45c61d6e/4:3/w_2000,c_limit/1_JasonWeingart.jpg");
 }
@@ -64,10 +66,6 @@ button {
     margin: auto;
     height: 100px;
     
-}
-
-#music-show iframe {
-  margin-left: 25px;
 }
 
 h5, p {
@@ -156,7 +154,7 @@ img:hover {
    cursor: pointer;
    box-shadow:  15px 15px  15px rgba(0, 0, 0, 0.5);
    transition: box-shadow 1s;
-   transform: translate(5px, 40px);
+   transform: translate(5px, 20px);
    transition: box-shadow 1s, transform 2s;
    
 }

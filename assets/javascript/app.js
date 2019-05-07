@@ -10,65 +10,18 @@ $(document).ready(function () {
     event.preventDefault();
 
     searchDeezerSource($("#deezSearch").val().trim());
+    hideShortsShowVideo();
   });
 
   $("#youtube").on("click", function (event) {
     event.preventDefault();
 
     searchYoutubeSource($("#deezSearch").val().trim());
-  });
-  
-  $("#forestIMG").click(function () {
-    var samplePath = "assets/forest.mp3";
-    var audio = audioSamplePlay(samplePath);
-
-    audio.play();
+    hideShortsShowVideo();
   });
 
-  $("#oceanIMG").click(function () {
-    var samplePath = "assets/ocean.mp3";
-    var audio = audioSamplePlay(samplePath);
-
-    audio.play();
-  });
-
-  $("#streamIMG").click(function () {
-    var samplePath = "assets/stream.mp3";
-    var audio = audioSamplePlay(samplePath);
-
-    audio.play();
-  });
-
-  $("#thunderIMG").click(function () {
-    var samplePath = "assets/thunder.wav";
-    var audio = audioSamplePlay(samplePath);
-
-    audio.play();
-  });
-
-  $("#rainIMG").click(function () {
-    var samplePath = "assets/rain.mp3";
-    var audio = audioSamplePlay(samplePath);
-
-    audio.play();
-  });
-
-  $("#waterfallIMG").click(function () {
-    var samplePath = "assets/waterfall.wav";
-    var audio = audioSamplePlay(samplePath);
-
-    audio.play();
-  });
-
-  $("#nightIMG").click(function () {
-    var samplePath = "assets/night.mp3";
-    var audio = audioSamplePlay(samplePath);
-
-    audio.play();
-  });
-
-  $("#whaleIMG").click(function () {
-    var samplePath = "assets/whale.mp3";
+  $(".card-img").click(function () {
+    var samplePath = $(this).attr("audioPath");
     var audio = audioSamplePlay(samplePath);
 
     audio.play();
@@ -82,5 +35,31 @@ $(document).ready(function () {
     audioElement.preload = audioSample.preload;
 
     return audioElement;
+  }
+
+  $('#back').click(function () {
+
+    $('.player').each(function () {
+      $thisSource = $(this).attr("src");
+      $(this).attr("src", $thisSource);
+    });
+    showShortsHideVideo();
+    flushVideoShow();
+  });
+
+  function hideShortsShowVideo() {
+    $(".shortcut-box").addClass("d-none");
+    $("#music-show").removeClass("d-none");
+    $("#back-button-box").removeClass("d-none");
+  }
+
+  function showShortsHideVideo() {
+    $(".shortcut-box").removeClass("d-none");
+    $("#music-show").addClass("d-none");
+    $("#back-button-box").addClass("d-none");
+  }
+
+  function flushVideoShow() {
+    $("#music-show").empty();
   }
 });
