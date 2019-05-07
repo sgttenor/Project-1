@@ -2,7 +2,6 @@ var videoIDs = [];
 
 function searchYoutubeSource(target) {
     var searchTerm = $("#tubeSearch").val().trim();
-
     console.log(searchTerm);
 
     var queryURL =
@@ -38,4 +37,28 @@ function searchYoutubeSource(target) {
         videoIDs.forEach(function (id) {
         })
     });
+
+
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            videoId: 'M7lc1UVf-VE',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
 }
+
+$("button").on("click", function(){
+    $(".container1").hide(1000);
+})
+
+$("#back").on("click", function(){
+    $(".container1").show(1000);
+    $(".container2").hide(1000);
+    
+})

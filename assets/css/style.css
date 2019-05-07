@@ -1,5 +1,5 @@
 
-h1, .lead, button  {
+h1, .lead, button {
     color: #ffffff !important;
     text-align: center;
     font-style: italic;
@@ -7,7 +7,9 @@ h1, .lead, button  {
     font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
-
+#back {
+  background-color: rgb(255, 20, 20);
+}
 
 display-4 {
      margin-top: 50px;
@@ -19,13 +21,16 @@ h1, .lead {
 
 button {
    color: #ffffff !important;
+   
 }
 
     /* .banner-color {
         background-color: rgba(210, 210, 137, 0.4);
     } */
 
-
+#back {
+  text-align: center;
+}
 .jumbotron {
     background-image: url("https://media.wired.com/photos/5ade7873b0e3e90b45c61d6e/4:3/w_2000,c_limit/1_JasonWeingart.jpg");
 }
@@ -35,8 +40,8 @@ button {
 }
 
 .banner-height {
-    padding-top: 50px;
-    margin-bottom: 200px;
+    padding-top: 10px;
+    margin-bottom: 100px;
 }
 
 .btn-outline-success {
@@ -59,6 +64,10 @@ button {
     margin: auto;
     height: 100px;
     
+}
+
+#music-show iframe {
+  margin-left: 25px;
 }
 
 h5, p {
