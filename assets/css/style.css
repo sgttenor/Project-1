@@ -20,14 +20,13 @@ display-4 {
 }
 
 h1, .lead {
-    text-shadow:  4px 4px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000; 
+    text-shadow:  4px 4px 0 #000, -1px -1px 0 #000, 2px 2px 0 #000, -1px -1px 0 #000, 2px 2px 0 #000; 
 }
 
 button {
    color: #ffffff !important;
    
 }
-
 
 .jumbotron {
     background-image: url("https://media.wired.com/photos/5ade7873b0e3e90b45c61d6e/4:3/w_2000,c_limit/1_JasonWeingart.jpg");
@@ -84,17 +83,6 @@ h5, p {
   animation-duration: 4s;
 
 }
-
-/* h1 {
-  animation:blinkingText 0.8s infinite;
-}
-@keyframes blinkingText{
-  0%{     color: #ffffff;    }
-  49%{    color: transparent; }
-  50%{    color: transparent; }
-  99%{    color:transparent;  }
-  100%{   color: #1e76be;    }
-} */
 
 @keyframes fadeIn {
   from {

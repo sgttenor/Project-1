@@ -6,6 +6,8 @@ $(document).ready(function () {
     preload: true,
   }
 
+  // Run a search for something from the deezer api database.
+  // Actual functionality is defined in deezerSearch.js
   $("#deezer").on("click", function (event) {
     event.preventDefault();
 
@@ -13,6 +15,8 @@ $(document).ready(function () {
     hideShortsShowVideo();
   });
 
+  // Run a search for something from the youtube api database.
+  // Actual functionality is defined in youtubeSearch.js
   $("#youtube").on("click", function (event) {
     event.preventDefault();
 
