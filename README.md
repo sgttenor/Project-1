@@ -9,11 +9,12 @@ Easily access ambient sounds by querying categories and descriptors and allowing
 APIS that are being used: Soundcloud and Youtube
 
 
-Task breakdown - Marco HTML documentation and layout then Javascript
+Task breakdown - 
+                  
 
-                 Alapan styling and animation
+                 Marco styling and animation
                  
-                 Carlos - API implimentation
+                 Carlos/Alapan- API implimentation
                  
                  Group effort on Javascript
 
