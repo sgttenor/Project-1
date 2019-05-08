@@ -1,5 +1,10 @@
-function searchYoutubeSource(target) {
+// Row and column counting.
+// Used to generate bootstrap-grid-compliant html elements 
+var colCount = 0;
+var $videoRow;
+var $searchBox;
 
+function searchYoutubeSource(target) {
     // Read search term input by the user.
     // Define the URL and query to be sent through the API AJAX caller
     var searchTerm = $("#tubeSearch").val().trim();
@@ -13,11 +18,8 @@ function searchYoutubeSource(target) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        // Row and column counting.
-        // Used to generate bootstrap-grid-compliant html elements 
-        var colCount = -1;
-        var rowCount = 0;
-        var $videoRow = $("<div id='row-'" + rowCount + "' class='row'>");
+        // Group new results
+        $searchBox = $("<div class='search-group'>")
 
         // Reference the object sent back by AJAX
         var videoResults = response.items;
@@ -41,26 +43,23 @@ function searchYoutubeSource(target) {
             videoFrame.attr("allowfullscreen", true);
             videoFrame.attr("src", videoSource);
             videoFrame.addClass("player");
+            videoFrame.addClass("col-md-4");
+            videoFrame.addClass("video-frame");
 
             // Track grid layout, add rows and columns as needed.
-            if (colCount > 3 || colCount === -1) {
-                $videoRow = $("<div id='row-'" + rowCount + "' class='row'>");
+            if (colCount === 3 || colCount < 1) {
+                $videoRow = $("<div class='row mb-3'>");
 
                 $videoRow.append(videoFrame);
-                colCount = 0;
+                $searchBox.append($videoRow);
+                colCount = 1;
             }
             else {
                 $videoRow.append(videoFrame);
                 colCount++;
             }
-
-            rowCount++;
-
-            // Add elements
-            videoFrame.addClass("col-md-4");
-            videoFrame.addClass("video-frame");
-            $("#music-show").prepend(videoFrame);
         }
+
+        $("#music-show").prepend($searchBox);
     });
 }
-

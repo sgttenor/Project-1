@@ -1,3 +1,9 @@
+// Row and column counting.
+// Used to generate bootstrap-grid-compliant html elements 
+var colCount = 0;
+var $audioRow;
+var $searchBox;
+
 function searchDeezerSource(target) {
     $.ajax({
         url: ("https://deezerdevs-deezer.p.rapidapi.com/search?q=" + target),
@@ -7,11 +13,45 @@ function searchDeezerSource(target) {
         },
         method: "GET"
     }).then(function (response) {
-        var $audioBlock = $("<audio controls>");
+        console.log(response.data);
+        // Group new results
+        $searchBox = $("<div class='search-group'>")
 
-        $audioBlock.attr("src", response.data[0].preview);
-        $audioBlock.attr("type", "audio/mpeg");
+        // Limit number of return items to 13 items or less
+        if (length > 13) {
+            length = 13;
+        }
 
-        $("#music-show").append($audioBlock);
+        // Prepare new html elements to show query results.
+        for (var i = 0; i < response.data.length; i++) {
+            var $audioBox = $("<div class='col-4 card'>");
+            var $audioBlock = $("<audio controls>");
+            var audioTrackCurr = response.data[i];
+
+            // element attributes
+            $audioBlock.attr("src", audioTrackCurr.preview);
+            $audioBlock.attr("type", "audio/mpeg");
+            $audioBox.append($("<p>").append("<span class='font-weight-bold'>Track: </span>" + "<span class='font-italic'>" +
+            audioTrackCurr.title + "</span>"));
+            $audioBox.append($("<p>").append("<span class='font-weight-bold'>Album: </span>" + "<span class='font-italic'>" +
+            audioTrackCurr.album.title + "</span>"));
+            $audioBox.append($audioBlock);
+            $audioBox.append($("<p>").append("<a href='" + audioTrackCurr.link + "'>Purchase full track</a>"));
+
+            // Track grid layout, add rows and columns as needed.
+            if (colCount === 3 || colCount < 1) {
+                $audioRow = $("<div class='row mb-3'>");
+
+                $audioRow.append($audioBox);
+                $searchBox.append($audioRow);
+                colCount = 1;
+            }
+            else {
+                $audioRow.append($audioBox);
+                colCount++;
+            }
+        }
+
+        $("#music-show").prepend($searchBox);
     });
 }

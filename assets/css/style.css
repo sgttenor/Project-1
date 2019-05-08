@@ -11,10 +11,6 @@ h1, .lead, button {
   background-color: rgb(255, 20, 20);
 }
 
-.shortcut-box {
-  visibility: visible;
-}
-
 display-4 {
      margin-top: 50px;
 }
@@ -74,13 +70,13 @@ h5, p {
 
 /*image layout and animation*/
  button {
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-name: slideInLeft;
 } 
 
 .jumbotron, input {
   animation-name: fadeIn;
-  animation-duration: 4s;
+  animation-duration: 2s;
 
 }
 
@@ -109,7 +105,7 @@ h5, p {
 }
 
 img {
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-name: bounceIn;  
   }
 
