@@ -6,6 +6,8 @@ $(document).ready(function () {
     preload: true,
   }
 
+  // Run a search for something from the deezer api database.
+  // Actual functionality is defined in deezerSearch.js
   $("#deezer").on("click", function (event) {
     event.preventDefault();
 
@@ -13,6 +15,8 @@ $(document).ready(function () {
     hideShortsShowVideo();
   });
 
+  // Run a search for something from the youtube api database.
+  // Actual functionality is defined in youtubeSearch.js
   $("#youtube").on("click", function (event) {
     event.preventDefault();
 
@@ -20,6 +24,8 @@ $(document).ready(function () {
     hideShortsShowVideo();
   });
 
+  // Demo boxes house images which provide short snippets of audio.
+  // Check that a demo box is clicked and check its file path attribute.
   $(".card-img").click(function () {
     var samplePath = $(this).attr("audioPath");
     var audio = audioSamplePlay(samplePath);
@@ -27,6 +33,8 @@ $(document).ready(function () {
     audio.play();
   });
 
+  // Provide audio play from the referenced source file and
+  // formed into an html element.
   function audioSamplePlay(source) {
     var audioElement = audioSample.element;
 
@@ -37,6 +45,7 @@ $(document).ready(function () {
     return audioElement;
   }
 
+  // Empty the video box, return user to the demo boxes
   $('#back').click(function () {
 
     $('.player').each(function () {
@@ -47,6 +56,7 @@ $(document).ready(function () {
     flushVideoShow();
   });
 
+  // Visibility functionality
   function hideShortsShowVideo() {
     $(".shortcut-box").hide(1000);
     $("#music-show").removeClass("d-none");
